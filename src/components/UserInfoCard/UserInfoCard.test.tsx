@@ -34,6 +34,7 @@ test("rendering and submitting a basic Formik form", async () => {
   const emailInput = screen.getByLabelText(/email:/i);
   const phoneInput = screen.getByLabelText(/phone:/i);
   const websiteInput = screen.getByLabelText(/website:/i);
+
   await act(async () => {
     await fireEvent.change(usernameInput, {
       target: { value: userInfo.name },
@@ -48,13 +49,14 @@ test("rendering and submitting a basic Formik form", async () => {
       target: { value: userInfo.website },
     });
   });
+
   expect(usernameInput.getAttribute("value")).toEqual(userInfo.name);
   expect(emailInput.getAttribute("value")).toEqual(userInfo.email);
   expect(phoneInput.getAttribute("value")).toEqual(userInfo.phone);
   expect(websiteInput.getAttribute("value")).toEqual(userInfo.website);
 
-  act(() => {
-    fireEvent(
+  await act(async () => {
+    await fireEvent(
       screen.getByText("Edit"),
       new MouseEvent("click", {
         bubbles: true,
