@@ -1,0 +1,63 @@
+.card {
+  border: none !important;
+  border-radius: 15px !important;
+  padding: 8px;
+  height: 350px;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+}
+
+.card:hover {
+  transform: scale(1.04);
+}
+
+.upper {
+  height: 100px;
+}
+
+.upper img {
+  width: 100%;
+  height: inherit;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  object-fit: cover;
+  opacity: 0.9;
+  filter: blur(2px);
+}
+
+.user {
+  position: relative;
+}
+
+.profile img {
+  height: 70px;
+  width: 70px;
+  margin-top: 2px;
+}
+
+.profile {
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 40px);
+  height: 80px;
+  width: 80px;
+  border: 3px solid #fff;
+  background-color: gainsboro;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.info-text {
+  font-size: 12px;
+}
+
+.info-text span {
+  margin-left: 8px;
+}
+
+.col svg:hover {
+  fill: brown;
+}
